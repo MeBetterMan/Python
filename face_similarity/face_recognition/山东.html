@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/maps/shandong.js"></script>
+
+</head>
+<body>
+    <div id="4780ce13ce5a47e3a1b662d6c91de75b" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_4780ce13ce5a47e3a1b662d6c91de75b = echarts.init(
+            document.getElementById('4780ce13ce5a47e3a1b662d6c91de75b'), 'white', {renderer: 'canvas'});
+        var option_4780ce13ce5a47e3a1b662d6c91de75b = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "map",
+            "name": "\u786e\u8bca",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "mapType": "\u5c71\u4e1c",
+            "data": [
+                {
+                    "name": "\u6d4e\u5357\u5e02",
+                    "value": "47"
+                },
+                {
+                    "name": "\u9752\u5c9b\u5e02",
+                    "value": "61"
+                },
+                {
+                    "name": "\u6dc4\u535a\u5e02",
+                    "value": "30"
+                },
+                {
+                    "name": "\u67a3\u5e84\u5e02",
+                    "value": "24"
+                },
+                {
+                    "name": "\u70df\u53f0\u5e02",
+                    "value": "47"
+                },
+                {
+                    "name": "\u6f4d\u574a\u5e02",
+                    "value": "44"
+                },
+                {
+                    "name": "\u6d4e\u5b81\u5e02",
+                    "value": "260"
+                },
+                {
+                    "name": "\u6cf0\u5b89\u5e02",
+                    "value": "35"
+                },
+                {
+                    "name": "\u5a01\u6d77\u5e02",
+                    "value": "38"
+                },
+                {
+                    "name": "\u65e5\u7167\u5e02",
+                    "value": "16"
+                },
+                {
+                    "name": "\u4e34\u6c82\u5e02",
+                    "value": "49"
+                },
+                {
+                    "name": "\u5fb7\u5dde\u5e02",
+                    "value": "37"
+                },
+                {
+                    "name": "\u804a\u57ce\u5e02",
+                    "value": "38"
+                },
+                {
+                    "name": "\u6ee8\u5dde\u5e02",
+                    "value": "15"
+                },
+                {
+                    "name": "\u83cf\u6cfd\u5e02",
+                    "value": "18"
+                },
+                {
+                    "value": "1"
+                }
+            ],
+            "roam": true,
+            "zoom": 1,
+            "showLegendSymbol": true,
+            "emphasis": {}
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u786e\u8bca"
+            ],
+            "selected": {
+                "\u786e\u8bca": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "title": [
+        {
+            "text": "\u5c71\u4e1c\u5b9e\u65f6\u75ab\u60c5\u56fe-\u786e\u8bca\u4eba\u6570\uff1a760",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "piecewise",
+        "min": 0,
+        "max": 100,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "orient": "vertical",
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 14,
+        "borderWidth": 0,
+        "pieces": [
+            {
+                "min": 1000,
+                "label": ">1000\u4eba",
+                "color": "#6F171F"
+            },
+            {
+                "min": 500,
+                "max": 1000,
+                "label": "500-1000\u4eba",
+                "color": "#C92C34"
+            },
+            {
+                "min": 100,
+                "max": 499,
+                "label": "100-499\u4eba",
+                "color": "#E35B52"
+            },
+            {
+                "min": 10,
+                "max": 99,
+                "label": "10-99\u4eba",
+                "color": "#F39E86"
+            },
+            {
+                "min": 1,
+                "max": 9,
+                "label": "1-9\u4eba",
+                "color": "#FDEBD0"
+            }
+        ]
+    }
+};
+        chart_4780ce13ce5a47e3a1b662d6c91de75b.setOption(option_4780ce13ce5a47e3a1b662d6c91de75b);
+    </script>
+</body>
+</html>
