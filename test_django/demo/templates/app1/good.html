@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试反向解析</title>
+</head>
+<body>
+    <h1>Good Today, {{num}}</h1>
+    {{str}}
+    {{str | escape}}
+    {{str | safe}}
+    {%autoescape off%}
+        {{str}}
+    {%endautoescape%}
+</body>
+</html>

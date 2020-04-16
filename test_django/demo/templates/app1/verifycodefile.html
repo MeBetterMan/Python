@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>验证码</title>
+</head>
+<body>
+    <form method="post" action="/verifycodecheck/">
+        <input type="text" name="verifycode">
+        <img src="/verifycode/">
+        <input type="submit" value="提交" >
+        <span>{{flag}}</span>
+    </form>
+</body>
+</html>

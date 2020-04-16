@@ -1,4 +1,4 @@
-"""demo URL Configuration
+"""demo02 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -14,14 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include,re_path
-
-import os
-from  django.conf import settings
+from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('app1/', include('app1.urls')),
-    path('tinymce/', include('tinymce.urls')),
-    path('', include(('app1.urls', 'app1'), namespace='app')),  # 访问地址会交由app1下面的urls的代码
 ]

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分页</title>
+</head>
+<body>
+<ul>
+      {%for s in stuList%}
+        <li>{{s.sname}}--{{s.sgrade}}</li>
+      {%endfor%}
+</ul>
+<!---页面分页-->
+<ul>
+    {%for index in stuList.paginator.page_range%}
+    <!--如果在第2页，那么第2页不能够点击-->
+        {%if index == stuList.number%}
+            {{index}}
+        {%else%}
+    <li>
+            <a href="http://127.0.0.1:8000/stuPage/{{index}}">{{index}}</a>
+        </li>
+        {%endif%}
+    {%endfor%}
+</ul>
+
+</body>
+</html>

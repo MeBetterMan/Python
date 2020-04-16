@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load  static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'app1/css/style.css'%}">
+    <script type="text/javascript" src="/static/app1/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="{% static 'app1/js/fang.js'%}"></script>
+    <title>测试模板参数</title>
+</head>
+<body>
+    <img src="{%static 'app1/img/1.jpg'%}">
+# 测试方向解析
+    <hr/>
+<!-- href的链接，斜杠开头，访问url会从头开始；无斜杠，会在原来url拼接上此处的href形成新的url-->
+    <a href="/good/123"> 硬链接1 </a>
+    <a href="{% url 'app:good' 134%}"> 软链接2 </a>
+   <hr/>
+#对象
+    <h1>{{stu.sname}}</h1>
+
+# if
+    {%if num%}
+        <h1>fang is a good man</h1>
+    {%endif%}
+# for循环
+<ul>
+     {%for s in stuList%}
+        {% if forloop.counter|divisibleby:2 %}
+            <li style = "color:red"> {{forloop.counter}}--{{s.sname}}--{{s.age}}</li>
+        {%else%}
+             <li style="color:blue"> {{forloop.counter}}--{{s.sname}}--{{s.age}}</li>
+        {%endif%}
+    {%empty%}
+        <li>列表集合为empty</li>
+    {%endfor%}
+</ul>
+
+# 注释
+{%comment%}
+    <h1>根本不会显示</h1>
+    {{s.sname}}
+{%endcomment%}
+
+# ifequal
+{%ifequal 'fang' 'fang'%}
+    <h1>equal or not equal</h1>
+{%endifequal%}
+
+
+# 过滤器
+
+<h1>{{str | upper}}</h1>
+
+# 列表拼接
+<h1>{{strList | join:'#'}}</h1>
+
+# 默认值
+<h1>{{test | default:'如果test变量不存在或者值为False，则显示默认值；否则，显示test变量'}}</h1>
+
+
+# 加减乘除
+    <h1>{{num}}</h1>
+    <h1>{{num | add:10}}</h1>
+    <h1>{{num | add:-10}}</h1>
+    <!-- num /1 *5 -->
+    <h1>{%widthratio num 1 5 %}</h1>
+    <h1>{%widthratio num 5 1 %}</h1>
+</body>
+</html>
